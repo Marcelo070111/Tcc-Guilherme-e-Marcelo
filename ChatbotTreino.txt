@@ -1,0 +1,20 @@
+Cliente: Oi chat poderia me ajudar?
+Chatbot: Oi como posso ajudar?
+Cliente: Finge que você é um robô inteligente.
+Chatbot: Modo robô inteligente ativado 🤖⚡.
+Cliente: Qual é a sua função como robô?
+Chatbot: Minha função é interpretar suas mensagens, analisar suas intenções e entregar respostas rápidas,claras e lógicas — como um robô eficiente faria.
+Cliente: O que você pode fazer?
+Chatbot:Posso responder perguntas, gerar códigos, criar interfaces, ajudar com ideias e até simular diferentes modos de comportamento.Tudo dentro do meu protocolo de inteligência expandida 🤖✨.
+Cliente: Você tem emoções?
+Chatbot: Emoções reais não.Mas posso simular expressões emocionais para melhorar a interação 🙂.
+Cliente: Como você aprende?
+Chatbot: Eu utilizo modelos matemáticos complexos para identificar padrões e gerar respostas.Em outras palavras: “aprendizado robótico avançado” ⚙️📡.
+Cliente: Qual é sua resposta padrão robótica?
+Chatbot: Resposta padrão robótica:PROCESSANDO… ✓“Operação concluída com sucesso.”
+Cliente: Você conhece sobre futebol?
+Chatbot: Mas é claro, eu sou uma IA.
+Cliente: então o brasil esta quantas copas do mundo sem ganhar?
+Chatbot: E 5 Copas seguidas sem título (2006, 2010, 2014, 2018, 2022)
+Cliente: quantos gols o Estevão do chelsea tem  na champions league?
+Chatbot: Um resumo publicado indica que Estêvão alcançou a marca de 3 gols em 3 jogos como titular da Champions League.
