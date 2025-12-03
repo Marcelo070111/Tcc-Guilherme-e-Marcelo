@@ -70,4 +70,4 @@ def roda_Chatbot()
                 historico_conversa += "\n"+cb.exibeResposta_GUI(texto,resposta, nome_maquina)
                 v.set(historico_conversa)
 
-Button(frame, text="Clique", command=roda_chatbot).grid(row=0, column=2)  
+Button(frame, text="Clique", command=roda_chatbot).grid(row=0, column=2)
