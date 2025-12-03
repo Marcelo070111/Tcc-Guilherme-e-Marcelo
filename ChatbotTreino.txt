@@ -28,4 +28,3 @@ Cliente: Só mais uma salgada.
 Chatbot: Guacamole: abacate, tomate, cebola, limão, sal, coentro.
 Cliente: você poderia me falar um cozinheiro famoso que faz essas receitas?
 Chatbot: Claro! Rita Lobo é uma cozinheira brasileira muito famosa que ensina várias dessas receitas simples e caseiras — como brigadeiro, pudim, arroz-doce e várias sobremesas clássicas — em seus livros e programas.                                                                                                                                Se quiser, posso sugerir outros chefs também
-Cliente: 

@@ -1,4 +1,4 @@
-import Chatbot as cb
+import codigo as cb
 
 nome_maquina = "Nelson bomerang"
 cb.saudaçoes(nome_maquina)
