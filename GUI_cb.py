@@ -40,14 +40,14 @@ def roda_Chatbot():
 
     if entrada_nome_usuario:
         nome_usuario = e_mensagem.get()
-        saudacao = cb.saudacao(nome_maquina)
+        saudacao = cb.saudacao_Gui(nome_maquina)
         historico_conversa = nome_maquina+": "+saudacao+"\n"
-        v.set = (historico_conversa)
+        v.set(historico_conversa)
         entrada_nome_usuario = False 
 
     else:
         texto = e_mensagem.get()
-        saudacao = cb.saudacao(nome_maquina)
+        saudacao = cb.saudacao_Gui(nome_maquina)
         historico_conversa+="\n "+nome_usuario+": "+texto
         v.set(historico_conversa)
 
@@ -58,7 +58,7 @@ def roda_Chatbot():
             v.set(historico_conversa)
 
         else:
-            resposta = cb.buscaResposta("Cliente: "+texto+"\n")
+            resposta = cb.buscaResposta_GUI(nome_maquina, "Cliente: "+texto+"\n")
 
             if resposta == "Me desculpe, não sei oque falar":
                 historico_conversa += "\n Me desculpe, não sei oque falar. Oque você esperava? \n"

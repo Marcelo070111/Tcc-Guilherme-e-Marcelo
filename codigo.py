@@ -1,7 +1,7 @@
 def saudacao_Gui(nome):
     import random 
-    frases = ["Bom dia! Meu nome é " + nome + ". Como vai você?," "Olá!," "Oi, tudo bem?"]
-    print(frases[random.randit(0,2)])
+    frases = ["Bom dia! Meu nome é " + nome + ". Como vai você?", "Olá!", "Oi, tudo bem?"]
+    return frases[random.randint(0,2)]
 
 def recebeTexto_GUI():
     texto = "Cliente:" + input("Cliente")
@@ -13,7 +13,7 @@ def recebeTexto_GUI():
         return texto 
 
 def buscaResposta_GUI(nome,texto):
-    with open("ChatBotTreino.txt", "a+") as conhecimento:
+    with open("ChatBotTreino.txt", "a+", encoding="utf-8") as conhecimento:
         conhecimento.seek(0)
         while True:
             viu = conhecimento.readline()
@@ -39,7 +39,7 @@ def exibeResposta_GUI(resposta, nome):
     return "Continua"    
 
 def salva_sugestao(sugestao):
-    with open("BaseDeConhecimento.txt","a+") as conheciento
+    with open("BaseDeConhecimento.txt","a+") as conhecimento:
         conhecimento.write("Chatbot: " + sugestao + "\n")
     
 def jaccard(textoUsuario, textoBase):
@@ -51,6 +51,11 @@ def jaccard(textoUsuario, textoBase):
         for palavra in textoUsuario.split():
             if palavra in textoBase.split():
                 palavras_em_comum += 1
-        return plavras_em_comum/(len(textoBase.split()))
+        return palavras_em_comum/(len(textoBase.split()))
     
-def limpa_frase
+def limpa_frase(frase):
+    tirar = ["?","!","...",".",",","\n"]
+    for t in tirar:
+        frase = frase.replace(t,"")
+    frase = frase.upper()
+    return frase 
