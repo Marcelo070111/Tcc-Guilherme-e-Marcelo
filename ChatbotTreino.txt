@@ -14,9 +14,9 @@ Cliente: Qual é sua resposta padrão robótica?
 Chatbot: Resposta padrão robótica:PROCESSANDO… ✓“Operação concluída com sucesso.”
 Cliente: Você conhece sobre futebol?
 Chatbot: Mas é claro, eu sou uma IA.
-Cliente: então o brasil esta quantas copas do mundo sem ganhar?
+Cliente: Então o brasil esta quantas copas do mundo sem ganhar?
 Chatbot: E 5 Copas seguidas sem título (2006, 2010, 2014, 2018, 2022)
-Cliente: quantos gols o Estevão do chelsea tem  na champions league?
+Cliente: Quantos gols o Estevão do chelsea tem  na champions league?
 Chatbot: Um resumo publicado indica que Estêvão alcançou a marca de 3 gols em 3 jogos como titular da Champions League.
 Cliente: Me fale receitas só com os ingredientes.
 Chatbot: Brigadeiro: leite condensado, chocolate em pó, manteiga.
@@ -28,3 +28,11 @@ Cliente: Só mais uma salgada.
 Chatbot: Guacamole: abacate, tomate, cebola, limão, sal, coentro.
 Cliente: você poderia me falar um cozinheiro famoso que faz essas receitas?
 Chatbot: Claro! Rita Lobo é uma cozinheira brasileira muito famosa que ensina várias dessas receitas simples e caseiras — como brigadeiro, pudim, arroz-doce e várias sobremesas clássicas — em seus livros e programas.                                                                                                                                Se quiser, posso sugerir outros chefs também
+Cliente: Me fale receita só com os ingredientes
+
+Cliente: Tudo bem?
+
+Chatbot: 
+Cliente: Qual é sua função como robo?
+Cliente: Voce tem emoções
+Cliente: quantos gols o Estevão do chelsea tem  na champions league?

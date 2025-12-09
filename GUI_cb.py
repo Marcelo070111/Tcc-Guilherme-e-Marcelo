@@ -10,26 +10,34 @@ main_window.grid()
 frame = Frame(main_window)
 frame.grid()
 
-l_identif = Label(frame, text = "Insira uma mensagem: ")
-l_identif.grid(row=0, column=1)
+l_identif = Label(frame, text="Insira uma mensagem: ")
+l_identif.grid(row=0, column=0)
 
 e_mensagem = Entry(frame)
 e_mensagem.grid(row=0, column=1)
 
+Button(frame, text="Clique", command=lambda: roda_Chatbot()).grid(row=0, column=2)
+
 frame2 = Frame(main_window)
 frame2.grid(row=1, column=0)
-v = StringVar()
-Label(frame2, textvariable=v).grid()
+
+# CAIXA DE TEXTO PARA MOSTRAR A CONVERSA
+caixa = Text(frame2, height=30, width=50)
+caixa.grid()
 
 nome_maquina = "Nelson bomerang"
-
-v.set("Qual seu nome?")
-
 entrada_sugestao = False
-
 entrada_nome_usuario = True
-
 nome_usuario = ""
+historico_conversa = ""
+
+# MOSTRA PRIMEIRA MENSAGEM
+caixa.insert(END, "Qual seu nome?\n")
+
+def atualizar_conversa():
+    """Reescreve toda a conversa na caixa"""
+    caixa.delete("1.0", END)
+    caixa.insert(END, historico_conversa)
 
 def roda_Chatbot():
     global entrada_sugestao
@@ -38,37 +46,40 @@ def roda_Chatbot():
     global nome_usuario
     global nome_maquina
 
+    texto = e_mensagem.get()
+
     if entrada_nome_usuario:
-        nome_usuario = e_mensagem.get()
+        nome_usuario = texto
         saudacao = cb.saudacao_Gui(nome_maquina)
-        historico_conversa = nome_maquina+": "+saudacao+"\n"
-        v.set(historico_conversa)
-        entrada_nome_usuario = False 
+        historico_conversa = nome_maquina + ": " + saudacao + "\n"
+        entrada_nome_usuario = False
+
+        atualizar_conversa()
 
     else:
-        texto = e_mensagem.get()
         saudacao = cb.saudacao_Gui(nome_maquina)
-        historico_conversa+="\n "+nome_usuario+": "+texto
-        v.set(historico_conversa)
+        historico_conversa += "\n" + nome_usuario + ": " + texto
 
         if entrada_sugestao:
             cb.salva_sugestao(texto)
             entrada_sugestao = False
-            historico_conversa+="\n Agora aprendi! Vamos continuar nossa conversa...\n"
-            v.set(historico_conversa)
+            historico_conversa += "\nAgora aprendi! Vamos continuar nossa conversa...\n"
+            atualizar_conversa()
 
         else:
-            resposta = cb.buscaResposta_GUI(nome_maquina, "Cliente: "+texto+"\n")
+            resposta = cb.buscaResposta_GUI(nome_maquina, "Cliente: " + texto + "\n")
 
             if resposta == "Me desculpe, não sei oque falar":
-                historico_conversa += "\n Me desculpe, não sei oque falar. Oque você esperava? \n"
-                v.set(historico_conversa)
-                entrada_sugestao =  True
+                historico_conversa += "\nMe desculpe, não sei oque falar. O que você esperava?\n"
+                entrada_sugestao = True
+                atualizar_conversa()
             else:
-                historico_conversa += "\n"+cb.exibeResposta_GUI(texto,resposta, nome_maquina)
-                v.set(historico_conversa)
+                resposta_formatada = cb.exibeResposta_GUI(texto, resposta, nome_maquina)
+                historico_conversa += "\n" + resposta_formatada
+                atualizar_conversa()
 
-Button(frame, text="Clique", command=roda_Chatbot).grid(row=0, column=2)  
-
+    # Limpa o campo de digitação
+    e_mensagem.delete(0, END)
 
 main_window.mainloop()
+
