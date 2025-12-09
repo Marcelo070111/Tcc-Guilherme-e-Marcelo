@@ -82,4 +82,3 @@ def roda_Chatbot():
     e_mensagem.delete(0, END)
 
 main_window.mainloop()
-

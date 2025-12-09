@@ -36,3 +36,5 @@ Chatbot:
 Cliente: Qual é sua função como robo?
 Cliente: Voce tem emoções
 Cliente: quantos gols o Estevão do chelsea tem  na champions league?
+
+Cliente: Tudo certo e com você
